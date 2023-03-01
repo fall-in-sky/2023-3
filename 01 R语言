@@ -1,0 +1,507 @@
+> mtcars
+                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
+Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
+Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
+Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
+Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
+Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
+Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
+Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
+AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
+Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
+Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
+Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
+Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
+Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
+Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
+Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
+Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
+Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
+> library(xlsx)
+Error in library(xlsx) : 不存在叫‘xlsx’这个名字的程辑包
+> is.data.frame(mtcars)
+[1] TRUE
+> is.data.frame(state.x77)
+[1] FALSE
+> dstate.x77 <- as.data.frame(state.x77)
+> is.data.frame(state.x77)
+[1] FALSE
+> is.data.frame(dstate.x77)
+[1] TRUE
+> who1 <- 
++ jj
+Error: object 'jj' not found
+> x <- 1:100
+> sample(x,30)
+ [1] 31 56 18 58 50 30 88 63 54 34 76 43 44 13 60 68 19 90 87 97 12  1 92 65 41 71 16
+[28] 95 24 46
+> sample(x,30,replace = T)
+ [1]  79  77 100  78  30  92  38  25  36  40  56  94  20  16  68  49  60  75  17  29
+[21]  31  77  96  54  89  97  58  23  76  67
+> sort(x,30,replace = T)
+Error in sort(x, 30, replace = T) : 
+  'decreasing'必需是长度为一的矢量，你是不是想设'partial'的值？
+> sort(sample(x,30,replace = T))
+ [1]   1   6  23  30  34  37  39  45  46  47  48  52  54  55  56  58  59  61  62  64
+[21]  66  67  69  70  72  75  77  92  93 100
+> mtcars
+                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
+Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
+Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
+Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
+Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
+Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
+Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
+Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
+AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
+Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
+Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
+Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
+Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
+Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
+Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
+Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
+Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
+Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
+> mtcars[-1:-5,]
+                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
+Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
+Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
+Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
+Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
+Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
+Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
+Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
+AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
+Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
+Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
+Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
+Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
+Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
+Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
+Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
+Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
+Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
+> head(mtcars)
+                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+> cbind(USAccDeaths,state.area)
+Error in .cbind.ts(list(...), .makeNamesTs(...), dframe = FALSE, union = TRUE) : 
+  非时间序列的长度不对
+> cbind(USArrests,state.area)
+               Murder Assault UrbanPop Rape state.area
+Alabama          13.2     236       58 21.2      51609
+Alaska           10.0     263       48 44.5     589757
+Arizona           8.1     294       80 31.0     113909
+Arkansas          8.8     190       50 19.5      53104
+California        9.0     276       91 40.6     158693
+Colorado          7.9     204       78 38.7     104247
+Connecticut       3.3     110       77 11.1       5009
+Delaware          5.9     238       72 15.8       2057
+Florida          15.4     335       80 31.9      58560
+Georgia          17.4     211       60 25.8      58876
+Hawaii            5.3      46       83 20.2       6450
+Idaho             2.6     120       54 14.2      83557
+Illinois         10.4     249       83 24.0      56400
+Indiana           7.2     113       65 21.0      36291
+Iowa              2.2      56       57 11.3      56290
+Kansas            6.0     115       66 18.0      82264
+Kentucky          9.7     109       52 16.3      40395
+Louisiana        15.4     249       66 22.2      48523
+Maine             2.1      83       51  7.8      33215
+Maryland         11.3     300       67 27.8      10577
+Massachusetts     4.4     149       85 16.3       8257
+Michigan         12.1     255       74 35.1      58216
+Minnesota         2.7      72       66 14.9      84068
+Mississippi      16.1     259       44 17.1      47716
+Missouri          9.0     178       70 28.2      69686
+Montana           6.0     109       53 16.4     147138
+Nebraska          4.3     102       62 16.5      77227
+Nevada           12.2     252       81 46.0     110540
+New Hampshire     2.1      57       56  9.5       9304
+New Jersey        7.4     159       89 18.8       7836
+New Mexico       11.4     285       70 32.1     121666
+New York         11.1     254       86 26.1      49576
+North Carolina   13.0     337       45 16.1      52586
+North Dakota      0.8      45       44  7.3      70665
+Ohio              7.3     120       75 21.4      41222
+Oklahoma          6.6     151       68 20.0      69919
+Oregon            4.9     159       67 29.3      96981
+Pennsylvania      6.3     106       72 14.9      45333
+Rhode Island      3.4     174       87  8.3       1214
+South Carolina   14.4     279       48 22.5      31055
+South Dakota      3.8      86       45 12.8      77047
+Tennessee        13.2     188       59 26.9      42244
+Texas            12.7     201       80 25.5     267339
+Utah              3.2     120       80 22.9      84916
+Vermont           2.2      48       32 11.2       9609
+Virginia          8.5     156       63 20.7      40815
+Washington        4.0     145       73 26.2      68192
+West Virginia     5.7      81       39  9.3      24181
+Wisconsin         2.6      53       66 10.8      56154
+Wyoming           6.8     161       60 15.6      97914
+> head(cbind(USArrests,state.area))
+           Murder Assault UrbanPop Rape state.area
+Alabama      13.2     236       58 21.2      51609
+Alaska       10.0     263       48 44.5     589757
+Arizona       8.1     294       80 31.0     113909
+Arkansas      8.8     190       50 19.5      53104
+California    9.0     276       91 40.6     158693
+Colorado      7.9     204       78 38.7     104247
+> stractm <- t(mtcars)
+> sractm <- t(mtcars)
+> sractm
+     Mazda RX4 Mazda RX4 Wag Datsun 710 Hornet 4 Drive Hornet Sportabout Valiant
+mpg      21.00        21.000      22.80         21.400             18.70   18.10
+cyl       6.00         6.000       4.00          6.000              8.00    6.00
+disp    160.00       160.000     108.00        258.000            360.00  225.00
+hp      110.00       110.000      93.00        110.000            175.00  105.00
+drat      3.90         3.900       3.85          3.080              3.15    2.76
+wt        2.62         2.875       2.32          3.215              3.44    3.46
+qsec     16.46        17.020      18.61         19.440             17.02   20.22
+vs        0.00         0.000       1.00          1.000              0.00    1.00
+am        1.00         1.000       1.00          0.000              0.00    0.00
+gear      4.00         4.000       4.00          3.000              3.00    3.00
+carb      4.00         4.000       1.00          1.000              2.00    1.00
+     Duster 360 Merc 240D Merc 230 Merc 280 Merc 280C Merc 450SE Merc 450SL
+mpg       14.30     24.40    22.80    19.20     17.80      16.40      17.30
+cyl        8.00      4.00     4.00     6.00      6.00       8.00       8.00
+disp     360.00    146.70   140.80   167.60    167.60     275.80     275.80
+hp       245.00     62.00    95.00   123.00    123.00     180.00     180.00
+drat       3.21      3.69     3.92     3.92      3.92       3.07       3.07
+wt         3.57      3.19     3.15     3.44      3.44       4.07       3.73
+qsec      15.84     20.00    22.90    18.30     18.90      17.40      17.60
+vs         0.00      1.00     1.00     1.00      1.00       0.00       0.00
+am         0.00      0.00     0.00     0.00      0.00       0.00       0.00
+gear       3.00      4.00     4.00     4.00      4.00       3.00       3.00
+carb       4.00      2.00     2.00     4.00      4.00       3.00       3.00
+     Merc 450SLC Cadillac Fleetwood Lincoln Continental Chrysler Imperial Fiat 128
+mpg        15.20              10.40              10.400            14.700    32.40
+cyl         8.00               8.00               8.000             8.000     4.00
+disp      275.80             472.00             460.000           440.000    78.70
+hp        180.00             205.00             215.000           230.000    66.00
+drat        3.07               2.93               3.000             3.230     4.08
+wt          3.78               5.25               5.424             5.345     2.20
+qsec       18.00              17.98              17.820            17.420    19.47
+vs          0.00               0.00               0.000             0.000     1.00
+am          0.00               0.00               0.000             0.000     1.00
+gear        3.00               3.00               3.000             3.000     4.00
+carb        3.00               4.00               4.000             4.000     1.00
+     Honda Civic Toyota Corolla Toyota Corona Dodge Challenger AMC Javelin Camaro Z28
+mpg       30.400         33.900        21.500            15.50      15.200      13.30
+cyl        4.000          4.000         4.000             8.00       8.000       8.00
+disp      75.700         71.100       120.100           318.00     304.000     350.00
+hp        52.000         65.000        97.000           150.00     150.000     245.00
+drat       4.930          4.220         3.700             2.76       3.150       3.73
+wt         1.615          1.835         2.465             3.52       3.435       3.84
+qsec      18.520         19.900        20.010            16.87      17.300      15.41
+vs         1.000          1.000         1.000             0.00       0.000       0.00
+am         1.000          1.000         0.000             0.00       0.000       0.00
+gear       4.000          4.000         3.000             3.00       3.000       3.00
+carb       2.000          1.000         1.000             2.00       2.000       4.00
+     Pontiac Firebird Fiat X1-9 Porsche 914-2 Lotus Europa Ford Pantera L Ferrari Dino
+mpg            19.200    27.300         26.00       30.400          15.80        19.70
+cyl             8.000     4.000          4.00        4.000           8.00         6.00
+disp          400.000    79.000        120.30       95.100         351.00       145.00
+hp            175.000    66.000         91.00      113.000         264.00       175.00
+drat            3.080     4.080          4.43        3.770           4.22         3.62
+wt              3.845     1.935          2.14        1.513           3.17         2.77
+qsec           17.050    18.900         16.70       16.900          14.50        15.50
+vs              0.000     1.000          0.00        1.000           0.00         0.00
+am              0.000     1.000          1.00        1.000           1.00         1.00
+gear            3.000     4.000          5.00        5.000           5.00         5.00
+carb            2.000     1.000          2.00        2.000           4.00         6.00
+     Maserati Bora Volvo 142E
+mpg          15.00      21.40
+cyl           8.00       4.00
+disp        301.00     121.00
+hp          335.00     109.00
+drat          3.54       4.11
+wt            3.57       2.78
+qsec         14.60      18.60
+vs            0.00       1.00
+am            1.00       1.00
+gear          5.00       4.00
+carb          8.00       2.00
+> letters
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t"
+[21] "u" "v" "w" "x" "y" "z"
+> rev(letters)
+ [1] "z" "y" "x" "w" "v" "u" "t" "s" "r" "q" "p" "o" "n" "m" "l" "k" "j" "i" "h" "g"
+[21] "f" "e" "d" "c" "b" "a"
+> transform(women,cm= height*2.54)
+   height weight     cm
+1      58    115 147.32
+2      59    117 149.86
+3      60    120 152.40
+4      61    123 154.94
+5      62    126 157.48
+6      63    129 160.02
+7      64    132 162.56
+8      65    135 165.10
+9      66    139 167.64
+10     67    142 170.18
+11     68    146 172.72
+12     69    150 175.26
+13     70    154 177.80
+14     71    159 180.34
+15     72    164 182.88
+> sort(rivers)
+  [1]  135  202  210  210  215  217  230  230  233  237  246  250  250  250  255  259
+ [17]  260  260  265  268  270  276  280  280  280  281  286  290  291  300  300  300
+ [33]  301  306  310  310  314  315  320  325  327  329  330  332  336  338  340  350
+ [49]  350  350  350  352  360  360  360  360  375  377  380  380  383  390  390  392
+ [65]  407  410  411  420  420  424  425  430  431  435  444  445  450  460  460  465
+ [81]  470  490  500  500  505  524  525  525  529  538  540  545  560  570  600  600
+ [97]  600  605  610  618  620  625  630  652  671  680  696  710  720  720  730  735
+[113]  735  760  780  800  840  850  870  890  900  900  906  981 1000 1038 1054 1100
+[129] 1171 1205 1243 1270 1306 1450 1459 1770 1885 2315 2348 2533 3710
+> rev(sort(rivers))
+  [1] 3710 2533 2348 2315 1885 1770 1459 1450 1306 1270 1243 1205 1171 1100 1054 1038
+ [17] 1000  981  906  900  900  890  870  850  840  800  780  760  735  735  730  720
+ [33]  720  710  696  680  671  652  630  625  620  618  610  605  600  600  600  570
+ [49]  560  545  540  538  529  525  525  524  505  500  500  490  470  465  460  460
+ [65]  450  445  444  435  431  430  425  424  420  420  411  410  407  392  390  390
+ [81]  383  380  380  377  375  360  360  360  360  352  350  350  350  350  340  338
+ [97]  336  332  330  329  327  325  320  315  314  310  310  306  301  300  300  300
+[113]  291  290  286  281  280  280  280  276  270  268  265  260  260  259  255  250
+[129]  250  250  246  237  233  230  230  217  215  210  210  202  135
+> order(rivers)
+  [1]   8  17  39 108 129  52  36  42  91 117 133  34  56  87  76  55  41  75  37 127
+ [21] 138 107  13  30  72  53  29  19  49  61 103 124 126  46  94 123 116  14   2   3
+ [41]  35  18  11  65  12  81  51  27  60  78 111  54  43 112 119 134  97 105 102 104
+ [61]  96  33  47   4  28  73  88  48 110 122 106 139  77  92 125 100   6  74  95   9
+ [81]  57  93  84 136  22   5  31 132 135 113 120  99  62  59  10  21  45  86 118  80
+[101] 128  64  40 130 140  58  85  50  32 137  44   1  90  79  71 109  24  38  15  26
+[121]  63 131  16  82  20 121  89 114  67 115  25  98  83  23   7 141 101  69  66  70
+[141]  68
+> WorldPhones
+     N.Amer Europe Asia S.Amer Oceania Africa Mid.Amer
+1951  45939  21574 2876   1815    1646     89      555
+1956  60423  29990 4708   2568    2366   1411      733
+1957  64721  32510 5230   2695    2526   1546      773
+1958  68484  35218 6662   2845    2691   1663      836
+1959  71799  37598 6856   3000    2868   1769      911
+1960  76036  40341 8220   3145    3054   1905     1008
+1961  79831  43173 9053   3338    3224   2005     1076
+> Worldphones <- as.data.frame(WorldPhones)
+> rs <- rowSums(Worldphones)
+> rs
+  1951   1956   1957   1958   1959   1960   1961 
+ 74494 102199 110001 118399 124801 133709 141700 
+> cm <- colMeans(Worldphones)
+> cm
+    N.Amer     Europe       Asia     S.Amer    Oceania     Africa   Mid.Amer 
+66747.5714 34343.4286  6229.2857  2772.2857  2625.0000  1484.0000   841.7143 
+> total <- cbind(Worldphones,Total=rs)
+> total
+     N.Amer Europe Asia S.Amer Oceania Africa Mid.Amer  Total
+1951  45939  21574 2876   1815    1646     89      555  74494
+1956  60423  29990 4708   2568    2366   1411      733 102199
+1957  64721  32510 5230   2695    2526   1546      773 110001
+1958  68484  35218 6662   2845    2691   1663      836 118399
+1959  71799  37598 6856   3000    2868   1769      911 124801
+1960  76036  40341 8220   3145    3054   1905     1008 133709
+1961  79831  43173 9053   3338    3224   2005     1076 141700
+> rbind(total,cm)
+       N.Amer   Europe     Asia   S.Amer Oceania Africa  Mid.Amer     Total
+1951 45939.00 21574.00 2876.000 1815.000    1646     89  555.0000  74494.00
+1956 60423.00 29990.00 4708.000 2568.000    2366   1411  733.0000 102199.00
+1957 64721.00 32510.00 5230.000 2695.000    2526   1546  773.0000 110001.00
+1958 68484.00 35218.00 6662.000 2845.000    2691   1663  836.0000 118399.00
+1959 71799.00 37598.00 6856.000 3000.000    2868   1769  911.0000 124801.00
+1960 76036.00 40341.00 8220.000 3145.000    3054   1905 1008.0000 133709.00
+1961 79831.00 43173.00 9053.000 3338.000    3224   2005 1076.0000 141700.00
+8    66747.57 34343.43 6229.286 2772.286    2625   1484  841.7143  66747.57
+Warning message:
+In rbind(deparse.level, ...) :
+  number of columns of result, 8, is not a multiple of vector length 7 of arg 2
+> state.center
+$x
+ [1]  -86.7509 -127.2500 -111.6250  -92.2992 -119.7730 -105.5130  -72.3573  -74.9841
+ [9]  -81.6850  -83.3736 -126.2500 -113.9300  -89.3776  -86.0808  -93.3714  -98.1156
+[17]  -84.7674  -92.2724  -68.9801  -76.6459  -71.5800  -84.6870  -94.6043  -89.8065
+[25]  -92.5137 -109.3200  -99.5898 -116.8510  -71.3924  -74.2336 -105.9420  -75.1449
+[33]  -78.4686 -100.0990  -82.5963  -97.1239 -120.0680  -77.4500  -71.1244  -80.5056
+[41]  -99.7238  -86.4560  -98.7857 -111.3300  -72.5450  -78.2005 -119.7460  -80.6665
+[49]  -89.9941 -107.2560
+
+$y
+ [1] 32.5901 49.2500 34.2192 34.7336 36.5341 38.6777 41.5928 38.6777 27.8744 32.3329
+[11] 31.7500 43.5648 40.0495 40.0495 41.9358 38.4204 37.3915 30.6181 45.6226 39.2778
+[21] 42.3645 43.1361 46.3943 32.6758 38.3347 46.8230 41.3356 39.1063 43.3934 39.9637
+[31] 34.4764 43.1361 35.4195 47.2517 40.2210 35.5053 43.9078 40.9069 41.5928 33.6190
+[41] 44.3365 35.6767 31.3897 39.1063 44.2508 37.5630 47.4231 38.4204 44.5937 43.0504
+
+> lapply(state.center,FUN= length())
+Error in length() : 0 arguments passed to 'length' which requires 1
+> lapply(state.center,FUN= length
++ 
++ )
+$x
+[1] 50
+
+$y
+[1] 50
+
+> lapply(state.center,FUN= length)
+$x
+[1] 50
+
+$y
+[1] 50
+
+> sapply(state.center,FUN= length)
+ x  y 
+50 50 
+> state.name
+ [1] "Alabama"        "Alaska"         "Arizona"        "Arkansas"      
+ [5] "California"     "Colorado"       "Connecticut"    "Delaware"      
+ [9] "Florida"        "Georgia"        "Hawaii"         "Idaho"         
+[13] "Illinois"       "Indiana"        "Iowa"           "Kansas"        
+[17] "Kentucky"       "Louisiana"      "Maine"          "Maryland"      
+[21] "Massachusetts"  "Michigan"       "Minnesota"      "Mississippi"   
+[25] "Missouri"       "Montana"        "Nebraska"       "Nevada"        
+[29] "New Hampshire"  "New Jersey"     "New Mexico"     "New York"      
+[33] "North Carolina" "North Dakota"   "Ohio"           "Oklahoma"      
+[37] "Oregon"         "Pennsylvania"   "Rhode Island"   "South Carolina"
+[41] "South Dakota"   "Tennessee"      "Texas"          "Utah"          
+[45] "Vermont"        "Virginia"       "Washington"     "West Virginia" 
+[49] "Wisconsin"      "Wyoming"       
+> heatmap(state.x77)
+> x <- c(1,2,3,6,3)
+> mean(x)
+[1] 3
+> x-mean(x)
+[1] -2 -1  0  3  0
+> install.packages("reshape2")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+将程序包安装入‘C:/Users/Lenovo/AppData/Local/R/win-library/4.2’
+(因为‘lib’没有被指定)
+还安装相依关系‘plyr’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/plyr_1.8.8.zip'
+Content type 'application/zip' length 1153146 bytes (1.1 MB)
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/reshape2_1.4.4.zip'
+Content type 'application/zip' length 446554 bytes (436 KB)
+downloaded 436 KB
+
+程序包‘plyr’打开成功，MD5和检查也通过
+程序包‘reshape2’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\Lenovo\AppData\Local\Temp\RtmpmWcTov\downloaded_packages里
+> x <- data.frame(k1=c(NA,NA,3,4,5),k2=c(1,NA,NA,4,5),data=1:5)
+> x
+  k1 k2 data
+1 NA  1    1
+2 NA NA    2
+3  3 NA    3
+4  4  4    4
+5  5  5    5
+> install.packages(c("tidyr","dplyr"))
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+将程序包安装入‘C:/Users/Lenovo/AppData/Local/R/win-library/4.2’
+(因为‘lib’没有被指定)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/tidyr_1.3.0.zip'
+Content type 'application/zip' length 1292944 bytes (1.2 MB)
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/dplyr_1.1.0.zip'
+Content type 'application/zip' length 1542940 bytes (1.5 MB)
+downloaded 1.5 MB
+
+程序包‘tidyr’打开成功，MD5和检查也通过
+程序包‘dplyr’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\Lenovo\AppData\Local\Temp\RtmpmWcTov\downloaded_packages里
+> tdata <- mtcars[1:10,1:3]
+> tdata <- data.frame(names=rownames(tdata),tdata)
+> tdata
+                              names  mpg cyl  disp
+Mazda RX4                 Mazda RX4 21.0   6 160.0
+Mazda RX4 Wag         Mazda RX4 Wag 21.0   6 160.0
+Datsun 710               Datsun 710 22.8   4 108.0
+Hornet 4 Drive       Hornet 4 Drive 21.4   6 258.0
+Hornet Sportabout Hornet Sportabout 18.7   8 360.0
+Valiant                     Valiant 18.1   6 225.0
+Duster 360               Duster 360 14.3   8 360.0
+Merc 240D                 Merc 240D 24.4   4 146.7
+Merc 230                   Merc 230 22.8   4 140.8
+Merc 280                   Merc 280 19.2   6 167.6
+> gdata <- gather(tdata,key="KEY")
+Error in gather(tdata, key = "KEY") : could not find function "gather"
+> ls("package:'dplyr'")
+Error in as.environment(pos) : 
+  no item called "package:'dplyr'" on the search list
+> ls("package:dplyr")
+Error in as.environment(pos) : 
+  no item called "package:dplyr" on the search list
+> ls("dplyr")
+Error in as.environment(pos) : no item called "dplyr" on the search list
+> dplyr::filter(iris,Sepal.Length>7)
+   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+1           7.1         3.0          5.9         2.1 virginica
+2           7.6         3.0          6.6         2.1 virginica
+3           7.3         2.9          6.3         1.8 virginica
+4           7.2         3.6          6.1         2.5 virginica
+5           7.7         3.8          6.7         2.2 virginica
+6           7.7         2.6          6.9         2.3 virginica
+7           7.7         2.8          6.7         2.0 virginica
+8           7.2         3.2          6.0         1.8 virginica
+9           7.2         3.0          5.8         1.6 virginica
+10          7.4         2.8          6.1         1.9 virginica
+11          7.9         3.8          6.4         2.0 virginica
+12          7.7         3.0          6.1         2.3 virginica
