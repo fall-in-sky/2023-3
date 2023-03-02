@@ -1,0 +1,996 @@
+> ls()
+character(0)
+> Sys.Date()
+[1] "2023-03-02"
+> rm(fit)
+Warning message:
+In rm(fit) : object 'fit' not found
+> a <- 1:100
+> mean(a)
+[1] 50.5
+> sum(a)
+[1] 5050
+> plot(a)
+> par()
+$xlog
+[1] FALSE
+
+$ylog
+[1] FALSE
+
+$adj
+[1] 0.5
+
+$ann
+[1] TRUE
+
+$ask
+[1] FALSE
+
+$bg
+[1] "white"
+
+$bty
+[1] "o"
+
+$cex
+[1] 1
+
+$cex.axis
+[1] 1
+
+$cex.lab
+[1] 1
+
+$cex.main
+[1] 1.2
+
+$cex.sub
+[1] 1
+
+$cin
+[1] 0.15 0.20
+
+$col
+[1] "black"
+
+$col.axis
+[1] "black"
+
+$col.lab
+[1] "black"
+
+$col.main
+[1] "black"
+
+$col.sub
+[1] "black"
+
+$cra
+[1] 14.4 19.2
+
+$crt
+[1] 0
+
+$csi
+[1] 0.2
+
+$cxy
+[1] 3.774017 5.978751
+
+$din
+[1] 5.489583 5.416667
+
+$err
+[1] 0
+
+$family
+[1] ""
+
+$fg
+[1] "black"
+
+$fig
+[1] 0 1 0 1
+
+$fin
+[1] 5.489583 5.416667
+
+$font
+[1] 1
+
+$font.axis
+[1] 1
+
+$font.lab
+[1] 1
+
+$font.main
+[1] 2
+
+$font.sub
+[1] 1
+
+$lab
+[1] 5 5 7
+
+$las
+[1] 0
+
+$lend
+[1] "round"
+
+$lheight
+[1] 1
+
+$ljoin
+[1] "round"
+
+$lmitre
+[1] 10
+
+$lty
+[1] "solid"
+
+$lwd
+[1] 1
+
+$mai
+[1] 1.02 0.82 0.82 0.42
+
+$mar
+[1] 5.1 4.1 4.1 2.1
+
+$mex
+[1] 1
+
+$mfcol
+[1] 1 1
+
+$mfg
+[1] 1 1 1 1
+
+$mfrow
+[1] 1 1
+
+$mgp
+[1] 3 1 0
+
+$mkh
+[1] 0.001
+
+$new
+[1] FALSE
+
+$oma
+[1] 0 0 0 0
+
+$omd
+[1] 0 1 0 1
+
+$omi
+[1] 0 0 0 0
+
+$page
+[1] TRUE
+
+$pch
+[1] 1
+
+$pin
+[1] 4.249583 3.576667
+
+$plt
+[1] 0.1493738 0.9234915 0.1883077 0.8486154
+
+$ps
+[1] 12
+
+$pty
+[1] "m"
+
+$smo
+[1] 1
+
+$srt
+[1] 0
+
+$tck
+[1] NA
+
+$tcl
+[1] -0.5
+
+$usr
+[1]  -2.96 103.96  -2.96 103.96
+
+$xaxp
+[1]   0 100   5
+
+$xaxs
+[1] "r"
+
+$xaxt
+[1] "s"
+
+$xpd
+[1] FALSE
+
+$yaxp
+[1]   0 100   5
+
+$yaxs
+[1] "r"
+
+$yaxt
+[1] "s"
+
+$ylbias
+[1] 0.2
+
+> length(par)
+[1] 1
+> length(par())
+[1] 72
+> library(scatterplot3d)
+Error in library(scatterplot3d) : 不存在叫‘scatterplot3d’这个名字的程辑包
+> plot(c(1:20),c(seq(1,89,length.out = 20)),type="1",lty=1)
+Error in plot.xy(xy, type, ...) : invalid plot type '1'
+> round(rnorm(n=100,mean = 15,sd=2))
+  [1] 14 14 20 17 15 17 16 13 13 15 12 15 17 13 18 17 15 15 14 17 14 14 16 18 16 16 18
+ [28] 15 16 13 17 17 13 17 16 15 16 14 13 14 17 15 16 13 14 15 14 16 17 14 11 15 16 14
+ [55] 15 14 16 17 18 16 16 18 13 13 13 17 16 16 15 14 17 13 14 12 13 17 16 14 17 13 15
+ [82] 14 14 15 15 17 16 14 17 17 17 14 14 18 16 19 19 16 16 13
+> x <- round(rnorm(n=100,mean = 15,sd=2))
+> x
+  [1] 18 12 15 15 14 14 17 16 17 21 19 15 12 12 15 16 13 18 13 18 16 14 13 16 16 18 16
+ [28] 15 15 14 16 14 16 14 14 15 15 15 15 13 15 16 14 14 15 14 19 16 15 16 16 16 16 11
+ [55] 19 16 14 14 11 13 14 15 13 17 16 18 15 13 14 12 14 18 16 17 17 13 13 15 17 16 15
+ [82] 11 16 17 14 16 21 13 14 15 17 14 17 13 13 17 13 16 14 16
+> runif(50,min = 1,max = 100)
+ [1] 84.293228 10.942826 77.171002 64.831896 71.893289 38.088830  8.862929 88.828862
+ [9] 13.623538 61.397683 65.892889 78.341046 56.214747 66.595064 43.073981 98.774139
+[17] 80.250538  2.691674 34.441388 46.763085 20.668832 73.468950 16.037534 87.658360
+[25] 68.228733 64.866818 53.611312 50.904127 63.615814 60.512515 53.758782 52.539957
+[33] 64.764594 14.166774 26.286640 61.125760 74.862728 14.686945 87.313196 81.817469
+[41] 12.428927 12.025357 25.025566 89.841271 92.473964 21.980385 87.086734 72.187023
+[49] 68.896228  1.254853
+> set.seed(666)
+> runif(50)
+ [1] 0.77436849 0.19722419 0.97801384 0.20132735 0.36124443 0.74261194 0.97872844
+ [8] 0.49811371 0.01331584 0.25994613 0.77589308 0.01637905 0.09574478 0.14216354
+[15] 0.21112624 0.81125644 0.03654720 0.89163741 0.48323641 0.46666453 0.98422408
+[22] 0.60134555 0.03834435 0.14149569 0.80638553 0.26668568 0.04270205 0.61217452
+[29] 0.55334840 0.85350077 0.46977854 0.39761656 0.80463673 0.50889739 0.63491535
+[36] 0.49425172 0.28013090 0.90871035 0.78411616 0.55899702 0.24443749 0.53097066
+[43] 0.11839594 0.98338343 0.89775284 0.73857376 0.37731070 0.60616883 0.51219426
+[50] 0.98924666
+> runif(50)
+ [1] 0.06913359 0.08462063 0.12994557 0.74613202 0.03887918 0.68563542 0.14397736
+ [8] 0.89107996 0.08963612 0.03773272 0.77487436 0.81206388 0.26060255 0.65159500
+[15] 0.92380385 0.26610612 0.26613299 0.91091790 0.59056353 0.91814765 0.60379428
+[22] 0.32826395 0.66611781 0.87478750 0.06887527 0.79346301 0.57142701 0.04894407
+[29] 0.98035135 0.91453735 0.76595849 0.77584637 0.31251505 0.84221731 0.31414991
+[36] 0.75656389 0.96752438 0.16942292 0.69687518 0.87265079 0.13247078 0.07851311
+[43] 0.37822385 0.57962476 0.53642512 0.10853192 0.74031515 0.45178964 0.64610821
+[50] 0.74929873
+> set.seed(666)
+> runif(50)
+ [1] 0.77436849 0.19722419 0.97801384 0.20132735 0.36124443 0.74261194 0.97872844
+ [8] 0.49811371 0.01331584 0.25994613 0.77589308 0.01637905 0.09574478 0.14216354
+[15] 0.21112624 0.81125644 0.03654720 0.89163741 0.48323641 0.46666453 0.98422408
+[22] 0.60134555 0.03834435 0.14149569 0.80638553 0.26668568 0.04270205 0.61217452
+[29] 0.55334840 0.85350077 0.46977854 0.39761656 0.80463673 0.50889739 0.63491535
+[36] 0.49425172 0.28013090 0.90871035 0.78411616 0.55899702 0.24443749 0.53097066
+[43] 0.11839594 0.98338343 0.89775284 0.73857376 0.37731070 0.60616883 0.51219426
+[50] 0.98924666
+> summary(myvars)
+Error in summary(myvars) : object 'myvars' not found
+> summary(mtcars)
+      mpg             cyl             disp             hp             drat      
+ Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0   Min.   :2.760  
+ 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5   1st Qu.:3.080  
+ Median :19.20   Median :6.000   Median :196.3   Median :123.0   Median :3.695  
+ Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7   Mean   :3.597  
+ 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0   3rd Qu.:3.920  
+ Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0   Max.   :4.930  
+       wt             qsec             vs               am              gear      
+ Min.   :1.513   Min.   :14.50   Min.   :0.0000   Min.   :0.0000   Min.   :3.000  
+ 1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:3.000  
+ Median :3.325   Median :17.71   Median :0.0000   Median :0.0000   Median :4.000  
+ Mean   :3.217   Mean   :17.85   Mean   :0.4375   Mean   :0.4062   Mean   :3.688  
+ 3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:4.000  
+ Max.   :5.424   Max.   :22.90   Max.   :1.0000   Max.   :1.0000   Max.   :5.000  
+      carb      
+ Min.   :1.000  
+ 1st Qu.:2.000  
+ Median :2.000  
+ Mean   :2.812  
+ 3rd Qu.:4.000  
+ Max.   :8.000  
+> fivenum(mtcars$hp)
+[1]  52  96 123 180 335
+> install.packages("pastecs")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+将程序包安装入‘C:/Users/Lenovo/AppData/Local/R/win-library/4.2’
+(因为‘lib’没有被指定)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/pastecs_1.3.21.zip'
+Content type 'application/zip' length 479797 bytes (468 KB)
+downloaded 468 KB
+
+程序包‘pastecs’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\Lenovo\AppData\Local\Temp\RtmpKUxBZA\downloaded_packages里
+> library(pastecs)
+> describe(mtcars,trim=0.1)
+Error in describe(mtcars, trim = 0.1) : 
+  could not find function "describe"
+> #后入为主
+> head(cars93)
+Error in head(cars93) : object 'cars93' not found
+> describe.by(mtcars)
+Error in describe.by(mtcars) : could not find function "describe.by"
+> split(mtcars,mtcars$cyl)
+$`4`
+                mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Datsun 710     22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
+Merc 240D      24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
+Merc 230       22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+Fiat 128       32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+Honda Civic    30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
+Toyota Corolla 33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
+Toyota Corona  21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
+Fiat X1-9      27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
+Porsche 914-2  26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
+Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
+Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
+
+$`6`
+                mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4      21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag  21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
+Hornet 4 Drive 21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+Valiant        18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+Merc 280       19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+Merc 280C      17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
+Ferrari Dino   19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
+
+$`8`
+                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
+Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
+Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
+AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
+Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
+Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
+Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
+Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
+
+> cut(mtcars$mpg,c(seq(10,50,10)))
+ [1] (20,30] (20,30] (20,30] (20,30] (10,20] (10,20] (10,20] (20,30] (20,30] (10,20]
+[11] (10,20] (10,20] (10,20] (10,20] (10,20] (10,20] (10,20] (30,40] (30,40] (30,40]
+[21] (20,30] (10,20] (10,20] (10,20] (10,20] (20,30] (20,30] (30,40] (10,20] (10,20]
+[31] (10,20] (20,30]
+Levels: (10,20] (20,30] (30,40] (40,50]
+> table(mtcars$cyl)
+
+ 4  6  8 
+11  7 14 
+> table(cut(mtcars$mpg,c(seq(10,50,10))))
+
+(10,20] (20,30] (30,40] (40,50] 
+     18      10       4       0 
+> with(data= Arthritis,{table(Treatment,Improved)})
+Error in with(data = Arthritis, { : object 'Arthritis' not found
+> Arthritis
+Error: object 'Arthritis' not found
+> with(data= "Arthritis",{table(Treatment,Improved)})
+Error in eval(substitute(expr), data, enclos = parent.frame()) : 
+  invalid 'envir' argument of type 'character'
+> ?fisher.test
+> cor(state.x77)
+            Population     Income  Illiteracy    Life Exp     Murder     HS Grad
+Population  1.00000000  0.2082276  0.10762237 -0.06805195  0.3436428 -0.09848975
+Income      0.20822756  1.0000000 -0.43707519  0.34025534 -0.2300776  0.61993232
+Illiteracy  0.10762237 -0.4370752  1.00000000 -0.58847793  0.7029752 -0.65718861
+Life Exp   -0.06805195  0.3402553 -0.58847793  1.00000000 -0.7808458  0.58221620
+Murder      0.34364275 -0.2300776  0.70297520 -0.78084575  1.0000000 -0.48797102
+HS Grad    -0.09848975  0.6199323 -0.65718861  0.58221620 -0.4879710  1.00000000
+Frost      -0.33215245  0.2262822 -0.67194697  0.26206801 -0.5388834  0.36677970
+Area        0.02254384  0.3633154  0.07726113 -0.10733194  0.2283902  0.33354187
+                Frost        Area
+Population -0.3321525  0.02254384
+Income      0.2262822  0.36331544
+Illiteracy -0.6719470  0.07726113
+Life Exp    0.2620680 -0.10733194
+Murder     -0.5388834  0.22839021
+HS Grad     0.3667797  0.33354187
+Frost       1.0000000  0.05922910
+Area        0.0592291  1.00000000
+> cor(state.x77,method = "spearman")
+           Population      Income Illiteracy   Life Exp     Murder    HS Grad
+Population  1.0000000  0.12460984  0.3130496 -0.1040171  0.3457401 -0.3833649
+Income      0.1246098  1.00000000 -0.3145948  0.3241050 -0.2174623  0.5104809
+Illiteracy  0.3130496 -0.31459482  1.0000000 -0.5553735  0.6723592 -0.6545396
+Life Exp   -0.1040171  0.32410498 -0.5553735  1.0000000 -0.7802406  0.5239410
+Murder      0.3457401 -0.21746230  0.6723592 -0.7802406  1.0000000 -0.4367330
+HS Grad    -0.3833649  0.51048095 -0.6545396  0.5239410 -0.4367330  1.0000000
+Frost      -0.4588526  0.19686382 -0.6831936  0.2983910 -0.5438432  0.3985351
+Area       -0.1206723  0.05709484 -0.2503721  0.1275002  0.1064259  0.4389752
+                Frost        Area
+Population -0.4588526 -0.12067227
+Income      0.1968638  0.05709484
+Illiteracy -0.6831936 -0.25037208
+Life Exp    0.2983910  0.12750018
+Murder     -0.5438432  0.10642590
+HS Grad     0.3985351  0.43897520
+Frost       1.0000000  0.11228778
+Area        0.1122878  1.00000000
+> 
+> cov(state.x77)
+              Population        Income   Illiteracy      Life Exp       Murder
+Population 19931683.7588   571229.7796  292.8679592 -4.078425e+02  5663.523714
+Income       571229.7796   377573.3061 -163.7020408  2.806632e+02  -521.894286
+Illiteracy      292.8680     -163.7020    0.3715306 -4.815122e-01     1.581776
+Life Exp       -407.8425      280.6632   -0.4815122  1.802020e+00    -3.869480
+Murder         5663.5237     -521.8943    1.5817755 -3.869480e+00    13.627465
+HS Grad       -3551.5096     3076.7690   -3.2354694  6.312685e+00   -14.549616
+Frost        -77081.9727     7227.6041  -21.2900000  1.828678e+01  -103.406000
+Area        8587916.9494 19049013.7510 4018.3371429 -1.229410e+04 71940.429959
+                 HS Grad        Frost          Area
+Population  -3551.509551 -77081.97265  8.587917e+06
+Income       3076.768980   7227.60408  1.904901e+07
+Illiteracy     -3.235469    -21.29000  4.018337e+03
+Life Exp        6.312685     18.28678 -1.229410e+04
+Murder        -14.549616   -103.40600  7.194043e+04
+HS Grad        65.237894    153.99216  2.298732e+05
+Frost         153.992163   2702.00857  2.627039e+05
+Area       229873.192816 262703.89306  7.280748e+09
+> colnames(state.x77)
+[1] "Population" "Income"     "Illiteracy" "Life Exp"   "Murder"     "HS Grad"   
+[7] "Frost"      "Area"      
+> x <- state.x77[,c(1,2,3,6)]
+> y <- state.x77[c]
+Error in state.x77[c] : invalid subscript type 'builtin'
+> y <- state.x77[,c(4,5)]
+> x <- state.x77[,c(1,2,3,6)]
+> cor(x,y)
+              Life Exp     Murder
+Population -0.06805195  0.3436428
+Income      0.34025534 -0.2300776
+Illiteracy -0.58847793  0.7029752
+HS Grad     0.58221620 -0.4879710
+> install.packages("ggm")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+将程序包安装入‘C:/Users/Lenovo/AppData/Local/R/win-library/4.2’
+(因为‘lib’没有被指定)
+Warning in install.packages :
+  没有'‘graph’'这种相依关系
+还安装相依关系‘igraph’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/igraph_1.4.1.zip'
+Content type 'application/zip' length 6402867 bytes (6.1 MB)
+downloaded 6.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ggm_2.5.zip'
+Content type 'application/zip' length 448174 bytes (437 KB)
+downloaded 437 KB
+
+程序包‘igraph’打开成功，MD5和检查也通过
+程序包‘ggm’打开成功，MD5和检查也通过
+
+下载的二进制程序包在
+	C:\Users\Lenovo\AppData\Local\Temp\RtmpKUxBZA\downloaded_packages里
+> colnames(state.x77)
+[1] "Population" "Income"     "Illiteracy" "Life Exp"   "Murder"     "HS Grad"   
+[7] "Frost"      "Area"      
+> pcor(c(1,5,2,3,6),cov(state.x77))
+Error in pcor(c(1, 5, 2, 3, 6), cov(state.x77)) : 
+  could not find function "pcor"
+> corr.test(states, use="complaete")
+Error in corr.test(states, use = "complaete") : 
+  could not find function "corr.test"
+> corr.test(states, use="complete")
+Error in corr.test(states, use = "complete") : 
+  could not find function "corr.test"
+> cor.test(state.x77[,3],state.x77[,5] )
+
+	Pearson's product-moment correlation
+
+data:  state.x77[, 3] and state.x77[, 5]
+t = 6.8479, df = 48, p-value = 1.258e-08
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.5279280 0.8207295
+sample estimates:
+      cor 
+0.7029752 
+
+> library(psych)
+Error in library(psych) : 不存在叫‘psych’这个名字的程辑包
+> x <- pcor(c(1,5,2,3,6)cov(state.x77))
+Error: unexpected symbol in "x <- pcor(c(1,5,2,3,6)cov"
+> UScrime
+Error: object 'UScrime' not found
+> library(MASS)
+> ls("package:graphics")
+ [1] "abline"          "arrows"          "assocplot"       "axis"           
+ [5] "Axis"            "axis.Date"       "axis.POSIXct"    "axTicks"        
+ [9] "barplot"         "barplot.default" "box"             "boxplot"        
+[13] "boxplot.default" "boxplot.matrix"  "bxp"             "cdplot"         
+[17] "clip"            "close.screen"    "co.intervals"    "contour"        
+[21] "contour.default" "coplot"          "curve"           "dotchart"       
+[25] "erase.screen"    "filled.contour"  "fourfoldplot"    "frame"          
+[29] "grconvertX"      "grconvertY"      "grid"            "hist"           
+[33] "hist.default"    "identify"        "image"           "image.default"  
+[37] "layout"          "layout.show"     "lcm"             "legend"         
+[41] "lines"           "lines.default"   "locator"         "matlines"       
+[45] "matplot"         "matpoints"       "mosaicplot"      "mtext"          
+[49] "pairs"           "pairs.default"   "panel.smooth"    "par"            
+[53] "persp"           "pie"             "plot"            "plot.default"   
+[57] "plot.design"     "plot.function"   "plot.new"        "plot.window"    
+[61] "plot.xy"         "points"          "points.default"  "polygon"        
+[65] "polypath"        "rasterImage"     "rect"            "rug"            
+[69] "screen"          "segments"        "smoothScatter"   "spineplot"      
+[73] "split.screen"    "stars"           "stem"            "strheight"      
+[77] "stripchart"      "strwidth"        "sunflowerplot"   "symbols"        
+[81] "text"            "text.default"    "title"           "xinch"          
+[85] "xspline"         "xyinch"          "yinch"          
+> women
+   height weight
+1      58    115
+2      59    117
+3      60    120
+4      61    123
+5      62    126
+6      63    129
+7      64    132
+8      65    135
+9      66    139
+10     67    142
+11     68    146
+12     69    150
+13     70    154
+14     71    159
+15     72    164
+> plot(mtcars$cyl)
+> plot(as.factor(cars$cyl))
+Error in plot.window(xlim, ylim, log = log, ...) : 'xlim'值不能是无限的
+In addition: Warning messages:
+1: In min(w.l) : no non-missing arguments to min; returning Inf
+2: In max(w.r) : no non-missing arguments to max; returning -Inf
+3: In min(x) : no non-missing arguments to min; returning Inf
+4: In max(x) : no non-missing arguments to max; returning -Inf
+> plot(as.factor(mtcars$cyl))
+> par()
+$xlog
+[1] FALSE
+
+$ylog
+[1] FALSE
+
+$adj
+[1] 0.5
+
+$ann
+[1] TRUE
+
+$ask
+[1] FALSE
+
+$bg
+[1] "white"
+
+$bty
+[1] "o"
+
+$cex
+[1] 1
+
+$cex.axis
+[1] 1
+
+$cex.lab
+[1] 1
+
+$cex.main
+[1] 1.2
+
+$cex.sub
+[1] 1
+
+$cin
+[1] 0.15 0.20
+
+$col
+[1] "black"
+
+$col.axis
+[1] "black"
+
+$col.lab
+[1] "black"
+
+$col.main
+[1] "black"
+
+$col.sub
+[1] "black"
+
+$cra
+[1] 14.4 19.2
+
+$crt
+[1] 0
+
+$csi
+[1] 0.2
+
+$cxy
+[1] 0.1296127 0.7906803
+
+$din
+[1] 5.489583 5.416667
+
+$err
+[1] 0
+
+$family
+[1] ""
+
+$fg
+[1] "black"
+
+$fig
+[1] 0 1 0 1
+
+$fin
+[1] 5.489583 5.416667
+
+$font
+[1] 1
+
+$font.axis
+[1] 1
+
+$font.lab
+[1] 1
+
+$font.main
+[1] 2
+
+$font.sub
+[1] 1
+
+$lab
+[1] 5 5 7
+
+$las
+[1] 0
+
+$lend
+[1] "round"
+
+$lheight
+[1] 1
+
+$ljoin
+[1] "round"
+
+$lmitre
+[1] 10
+
+$lty
+[1] "solid"
+
+$lwd
+[1] 1
+
+$mai
+[1] 1.02 0.82 0.82 0.42
+
+$mar
+[1] 5.1 4.1 4.1 2.1
+
+$mex
+[1] 1
+
+$mfcol
+[1] 1 1
+
+$mfg
+[1] 1 1 1 1
+
+$mfrow
+[1] 1 1
+
+$mgp
+[1] 3 1 0
+
+$mkh
+[1] 0.001
+
+$new
+[1] FALSE
+
+$oma
+[1] 0 0 0 0
+
+$omd
+[1] 0 1 0 1
+
+$omi
+[1] 0 0 0 0
+
+$page
+[1] TRUE
+
+$pch
+[1] 1
+
+$pin
+[1] 4.249583 3.576667
+
+$plt
+[1] 0.1493738 0.9234915 0.1883077 0.8486154
+
+$ps
+[1] 12
+
+$pty
+[1] "m"
+
+$smo
+[1] 1
+
+$srt
+[1] 0
+
+$tck
+[1] NA
+
+$tcl
+[1] -0.5
+
+$usr
+[1]  0.064  3.736 -0.140 14.000
+
+$xaxp
+[1] 0.5 3.5 6.0
+
+$xaxs
+[1] "r"
+
+$xaxt
+[1] "s"
+
+$xpd
+[1] FALSE
+
+$yaxp
+[1]  0 14  7
+
+$yaxs
+[1] "r"
+
+$yaxt
+[1] "s"
+
+$ylbias
+[1] 0.2
+
+> plot(as.factor(mtcars$cyl),col=c('red','green','blue'))
+> abs(x)
+               Population Income Illiteracy HS Grad
+Alabama              3615   3624        2.1    41.3
+Alaska                365   6315        1.5    66.7
+Arizona              2212   4530        1.8    58.1
+Arkansas             2110   3378        1.9    39.9
+California          21198   5114        1.1    62.6
+Colorado             2541   4884        0.7    63.9
+Connecticut          3100   5348        1.1    56.0
+Delaware              579   4809        0.9    54.6
+Florida              8277   4815        1.3    52.6
+Georgia              4931   4091        2.0    40.6
+Hawaii                868   4963        1.9    61.9
+Idaho                 813   4119        0.6    59.5
+Illinois            11197   5107        0.9    52.6
+Indiana              5313   4458        0.7    52.9
+Iowa                 2861   4628        0.5    59.0
+Kansas               2280   4669        0.6    59.9
+Kentucky             3387   3712        1.6    38.5
+Louisiana            3806   3545        2.8    42.2
+Maine                1058   3694        0.7    54.7
+Maryland             4122   5299        0.9    52.3
+Massachusetts        5814   4755        1.1    58.5
+Michigan             9111   4751        0.9    52.8
+Minnesota            3921   4675        0.6    57.6
+Mississippi          2341   3098        2.4    41.0
+Missouri             4767   4254        0.8    48.8
+Montana               746   4347        0.6    59.2
+Nebraska             1544   4508        0.6    59.3
+Nevada                590   5149        0.5    65.2
+New Hampshire         812   4281        0.7    57.6
+New Jersey           7333   5237        1.1    52.5
+New Mexico           1144   3601        2.2    55.2
+New York            18076   4903        1.4    52.7
+North Carolina       5441   3875        1.8    38.5
+North Dakota          637   5087        0.8    50.3
+Ohio                10735   4561        0.8    53.2
+Oklahoma             2715   3983        1.1    51.6
+Oregon               2284   4660        0.6    60.0
+Pennsylvania        11860   4449        1.0    50.2
+Rhode Island          931   4558        1.3    46.4
+South Carolina       2816   3635        2.3    37.8
+South Dakota          681   4167        0.5    53.3
+Tennessee            4173   3821        1.7    41.8
+Texas               12237   4188        2.2    47.4
+Utah                 1203   4022        0.6    67.3
+Vermont               472   3907        0.6    57.1
+Virginia             4981   4701        1.4    47.8
+Washington           3559   4864        0.6    63.5
+West Virginia        1799   3617        1.4    41.6
+Wisconsin            4589   4468        0.7    54.5
+Wyoming               376   4566        0.6    62.9
+> cor()
+Error in is.data.frame(x) : argument "x" is missing, with no default
+> cor
+function (x, y = NULL, use = "everything", method = c("pearson", 
+    "kendall", "spearman")) 
+{
+    na.method <- pmatch(use, c("all.obs", "complete.obs", "pairwise.complete.obs", 
+        "everything", "na.or.complete"))
+    if (is.na(na.method)) 
+        stop("invalid 'use' argument")
+    method <- match.arg(method)
+    if (is.data.frame(y)) 
+        y <- as.matrix(y)
+    if (is.data.frame(x)) 
+        x <- as.matrix(x)
+    if (!is.matrix(x) && is.null(y)) 
+        stop("supply both 'x' and 'y' or a matrix-like 'x'")
+    if (!(is.numeric(x) || is.logical(x))) 
+        stop("'x' must be numeric")
+    stopifnot(is.atomic(x))
+    if (!is.null(y)) {
+        if (!(is.numeric(y) || is.logical(y))) 
+            stop("'y' must be numeric")
+        stopifnot(is.atomic(y))
+    }
+    Rank <- function(u) {
+        if (length(u) == 0L) 
+            u
+        else if (is.matrix(u)) {
+            if (nrow(u) > 1L) 
+                apply(u, 2L, rank, na.last = "keep")
+            else row(u)
+        }
+        else rank(u, na.last = "keep")
+    }
+    if (method == "pearson") 
+        .Call(C_cor, x, y, na.method, FALSE)
+    else if (na.method %in% c(2L, 5L)) {
+        if (is.null(y)) {
+            .Call(C_cor, Rank(na.omit(x)), NULL, na.method, method == 
+                "kendall")
+        }
+        else {
+            nas <- attr(na.omit(cbind(x, y)), "na.action")
+            dropNA <- function(x, nas) {
+                if (length(nas)) {
+                  if (is.matrix(x)) 
+                    x[-nas, , drop = FALSE]
+                  else x[-nas]
+                }
+                else x
+            }
+            .Call(C_cor, Rank(dropNA(x, nas)), Rank(dropNA(y, 
+                nas)), na.method, method == "kendall")
+        }
+    }
+    else if (na.method != 3L) {
+        x <- Rank(x)
+        if (!is.null(y)) 
+            y <- Rank(y)
+        .Call(C_cor, x, y, na.method, method == "kendall")
+    }
+    else {
+        if (is.null(y)) {
+            ncy <- ncx <- ncol(x)
+            if (ncx == 0) 
+                stop("'x' is empty")
+            r <- matrix(0, nrow = ncx, ncol = ncy)
+            for (i in seq_len(ncx)) {
+                for (j in seq_len(i)) {
+                  x2 <- x[, i]
+                  y2 <- x[, j]
+                  ok <- complete.cases(x2, y2)
+                  x2 <- rank(x2[ok])
+                  y2 <- rank(y2[ok])
+                  r[i, j] <- if (any(ok)) 
+                    .Call(C_cor, x2, y2, 1L, method == "kendall")
+                  else NA
+                }
+            }
+            r <- r + t(r) - diag(diag(r))
+            rownames(r) <- colnames(x)
+            colnames(r) <- colnames(x)
+            r
+        }
+        else {
+            if (length(x) == 0L || length(y) == 0L) 
+                stop("both 'x' and 'y' must be non-empty")
+            matrix_result <- is.matrix(x) || is.matrix(y)
+            if (!is.matrix(x)) 
+                x <- matrix(x, ncol = 1L)
+            if (!is.matrix(y)) 
+                y <- matrix(y, ncol = 1L)
+            ncx <- ncol(x)
+            ncy <- ncol(y)
+            r <- matrix(0, nrow = ncx, ncol = ncy)
+            for (i in seq_len(ncx)) {
+                for (j in seq_len(ncy)) {
+                  x2 <- x[, i]
+                  y2 <- y[, j]
+                  ok <- complete.cases(x2, y2)
+                  x2 <- rank(x2[ok])
+                  y2 <- rank(y2[ok])
+                  r[i, j] <- if (any(ok)) 
+                    .Call(C_cor, x2, y2, 1L, method == "kendall")
+                  else NA
+                }
+            }
+            rownames(r) <- colnames(x)
+            colnames(r) <- colnames(y)
+            if (matrix_result) 
+                r
+            else drop(r)
+        }
+    }
+}
+<bytecode: 0x0000029fa1447c48>
+<environment: namespace:stats>
+> myfun <- function()
++ {}
+> myfun <- function(x,na.omit=FALSE)
++ {if(na.omit)}
+Error: unexpected '}' in:
+"myfun <- function(x,na.omit=FALSE)
+{if(na.omit)}"
+> myfun <- function(x,na.omit=FALSE){
++ if(na.omit)
++ x <- x[!is.na(x)]
++ m <- mean(x)
++ n <- length(x)
++ s <- sd(x)
++ skew <- sum((x-m^3)/s^3)/n
++ kurt <- sum((x-m^4/s^4))/n-3
++ return(c(n=m,mean=m,stdev=s,skew=skew,kurtosis=kurt))
++ }
+> x <- 1:100
+> myfun(x)
+        n      mean     stdev      skew  kurtosis 
+50.500000 50.500000 29.011492 -5.272221 38.319100 
+> for (i in 1:10)(print("hello,world"))
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+[1] "hello,world"
+> 
